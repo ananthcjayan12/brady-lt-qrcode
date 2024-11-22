@@ -1,0 +1,2 @@
+from FileUploadQRCodeGenerator.wsgi import application
+#hello

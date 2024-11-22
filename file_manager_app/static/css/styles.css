@@ -1,0 +1,114 @@
+/* Additional styles for the navigation bar */
+.navbar {
+    background-color: #ffffff; /* Retain your desired background color */
+}
+
+.navbar-brand img {
+    max-height: 80px; /* Adjusted the logo height */
+    margin-right: 20px;
+}
+
+
+
+/* Retaining your previous styles and adding enhancements */
+header {
+    background-color: #f0f0f0;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    color: black !important;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;  /* Changed color to black */
+}
+
+section {
+    margin: 10px;
+}
+
+.footer-logo {
+    max-height: 100px;  /* You can adjust this as per your requirements */
+    display: block;
+    margin: 0 auto;   /* This centers the logo in the footer */
+}
+
+/* If you want to match the color of the footer to the navbar, we can use the same background color */
+footer {
+    background-color:  #6678de5e;
+    color: #333333;  /* This is assuming you want a dark text color to contrast with the light background */
+    padding: 15px;
+    text-align: center;
+    margin-top: 200px; 
+    height: 60px; 
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+:root {
+    --main-color: #007bff;
+    --secondary-color: #f0f0f0;
+    --text-color: #333333;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 36px;
+}
+
+.card-title {
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+.card-text {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: white;
+}
+
+.card {
+    margin: 10px;
+    padding: 15px;
+}
+
+.main-content {
+    flex: 1 0 auto;  /* This allows the main content to grow */
+}
+
+.login-content {
+    color: white;
+}

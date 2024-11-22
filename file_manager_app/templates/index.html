@@ -1,0 +1,32 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}URL to QR Code Generator{% endblock %}
+
+{% block content %}
+    <h1 style="color: white;" class="mb-4 text-center">URL to QR Code Generator</h1>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                
+                <!-- Removed Folder Name Input -->
+                
+                <div class="form-group">
+                    <label for="url">Enter URL:</label>
+                    <input type="text" class="form-control" name="url" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Generate QR Code</button>
+            </form>
+            {% if pdf_path %}
+<script>
+    window.onload = function() {
+        window.open("{{ pdf_path }}", "_blank");
+    }
+</script>
+{% endif %}
+        </div>
+    </div>
+{% endblock %}
