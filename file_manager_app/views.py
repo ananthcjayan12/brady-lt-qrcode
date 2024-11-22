@@ -25,19 +25,16 @@ load_dotenv()
 
 @login_required
 def index(request):
-    pdf_path = None
+    pdf_data = None
 
     if request.method == "POST":
-        url = request.POST.get("url")  # Get the URL from the form
+        url = request.POST.get("url")
 
         if url:
-            # Initialize your QRCodeGenerator
             qr_code_generator = QRCodeGenerator()
+            pdf_data = qr_code_generator.generate_qr_code_as_pdf(url)
 
-            # Generate the QR code for the given URL
-            pdf_path = qr_code_generator.generate_qr_code_as_pdf(url)
-
-    return render(request, "index.html", {"pdf_path": pdf_path})
+    return render(request, "index.html", {"pdf_data": pdf_data})
 
 
 # Other functions can remain the same
